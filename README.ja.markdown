@@ -3,14 +3,12 @@ Lokka Facebook Like Button
 
 これは、[いいね！ボタン](http://www.facebook-japan.com/iine.html)を作成する[Lokka](http://lokka.org)用のプラグインです。
 lokka-tweet_buttonを元に作られています
-これは、[ツイートボタン](http://twitter.com/goodies/tweetbutton)を作成する[Lokka](http://lokka.org)用のプラグインです。
 
 インストール
 ------------
 
     $ cd public/plugin
     $ git clone git://github.com/miminashi/lokka-facebook_like_button.git
-    $ git clone git://github.com/nkmrshn/lokka-tweet_button.git
 
 使い方
 ------
