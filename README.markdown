@@ -1,7 +1,11 @@
 Lokka Tweet Button
 ==================
 
+<<<<<<< HEAD
 This is a [Lokka](http://lokka.org) plugin to add ["Facebook Like Button"](http://www.facebook-japan.com/iine.html) link.
+=======
+This is a [Lokka](http://lokka.org) plugin to add ["Tweet Button"](http://twitter.com/goodies/tweetbutton) link.
+>>>>>>> upstream/master
 
 Installation
 ------------
@@ -9,14 +13,29 @@ Installation
 Run these commands:
 
     $ cd public/plugin
+<<<<<<< HEAD
     $ git clone git://github.com/miminashi/lokka-facebook_like_button.git
+=======
+    $ git clone git://github.com/nkmrshn/lokka-tweet_button.git
+>>>>>>> upstream/master
 
 Usage
 -----
 
 You can set options in the admin page [Plugins]->[Tweet Button].
 
+<<<<<<< HEAD
 The helper method is "facebook_like_button".  Don't forget to modify the theme template. If the facebook_like_button method called without any parameter, current page URL will be liked. If you want to specify the URL, call the method with String parameter like:
 
     <%= facebook_like_button("http://example.com/foo/bar/") %>
 
+=======
+The helper method is "tweet_button".  Don't forget to modify the theme template. If the tweet_button method called without any parameter, current page URL will be tweeted. If you want to specify the URL, call the method with String parameter like:
+
+    <%= tweet_button("http://example.com/foo/bar/") %>
+
+Notice
+------
+
+When the URL starts with "http://localhost" and clicked the Tweet button, you will get "URL required - 'url' parameter does not contain a valid URL." message from Twitter.
+>>>>>>> upstream/master
