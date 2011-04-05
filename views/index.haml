@@ -1,0 +1,35 @@
+%h2= t.facebook_like_button
+-#%form{:action => '/admin/plugins/facebook_like_button', :method => 'post'}
+  %input{:type => 'hidden', :name => '_method', :value => 'put'}
+  .field
+    %label{:for => 'facebook_like_button_count'}= t.facebook_like_button_count
+    %br 
+    %input{:type => 'radio', :id => 'facebook_like_button_count_vertical', :name => 'facebook_like_button_count', :value => 'vertical', :checked => Option.facebook_like_button_count == 'vertical'}
+    %label{:for => 'facebook_like_button_count_vertical'}= t.facebook_like_button_count_vertical
+    %input{:type => 'radio', :id => 'facebook_like_button_count_horizontal', :name => 'facebook_like_button_count', :value => 'horizontal', :checked => Option.facebook_like_button_count == 'horizontal'}
+    %label{:for => 'facebook_like_button_count_horizontal'}= t.facebook_like_button_count_horizontal
+    %input{:type => 'radio', :id => 'facebook_like_button_count_none', :name => 'facebook_like_button_count', :value => 'none', :checked => Option.facebook_like_button_count == 'none'}
+    %label{:for => 'facebook_like_button_count_none'}= t.facebook_like_button_count_none
+  .field
+    %label{:for => 'facebook_like_button_via'}= t.facebook_like_button_via + " (#{t.facebook_like_button_optional})"
+    %br
+    %input{:type => 'text', :id => 'facebook_like_button_via', :name => 'facebook_like_button_via', :value => Option.facebook_like_button_via}
+  .field
+    %label{:for => 'facebook_like_button_related_account'}= t.facebook_like_button_related_account + " (#{t.facebook_like_button_optional})"
+    %br
+    %input{:type => 'text', :id => 'facebook_like_button_related_account', :name => 'facebook_like_button_related_account', :value => Option.facebook_like_button_related_account}
+  .field
+    %label{:for => 'facebook_like_button_related_description'}= t.facebook_like_button_related_description + " (#{t.facebook_like_button_optional})"
+    %br
+    %input{:type => 'text', :id => 'facebook_like_button_related_description', :name => 'facebook_like_button_related_description', :value => Option.facebook_like_button_related_description}
+  .field
+    %label{:for => 'facebook_like_button_lang'}= t.facebook_like_button_lang + " (#{t.facebook_like_button_optional})"
+    %br
+    %select{:id => 'facebook_like_button_lang', :name => 'facebook_like_button_lang'}
+      %option{:value => 'en', :selected => Option.facebook_like_button_lang == 'en'}= t.facebook_like_button_lang_english
+      %option{:value => 'fr', :selected => Option.facebook_like_button_lang == 'fr'}= t.facebook_like_button_lang_french
+      %option{:value => 'de', :selected => Option.facebook_like_button_lang == 'de'}= t.facebook_like_button_lang_german
+      %option{:value => 'es', :selected => Option.facebook_like_button_lang == 'es'}= t.facebook_like_button_lang_spanish
+      %option{:value => 'ja', :selected => Option.facebook_like_button_lang == 'ja'}= t.facebook_like_button_lang_japanese
+  .field
+    %input{:type => 'submit', :value => t.edit}
